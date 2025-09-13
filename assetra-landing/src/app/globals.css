@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body { height: 100%; }
+
+body {
+  @apply bg-bg text-text antialiased;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(122,98,255,.15), transparent 60%),
+    radial-gradient(800px 400px at 80% 20%, rgba(255,92,173,.10), transparent 60%),
+    linear-gradient(180deg, #0b0b10 0%, #0e0e14 100%);
+}
+
+.container { @apply w-[min(1120px,92vw)] mx-auto; }
+
+.btn { @apply inline-flex items-center justify-center font-bold rounded-full shadow-soft; }
+.btn-gradient { @apply text-white bg-gradient-to-r from-brand-from via-brand-mid to-brand-to shadow-glowViolet hover:brightness-105 transition; }
+.btn-light { @apply bg-[#1c1c28] text-white/90 border border-white/10 hover:bg-[#232336] transition; }
+.card { @apply bg-white/5 border border-white/10 rounded-2xl shadow-soft; }
+.section { @apply py-16; }
+.section-title { @apply text-[clamp(1.6rem,1.2vw+1.2rem,2.4rem)] font-extrabold text-white mb-2; }
+.section-sub { @apply text-text-muted max-w-[800px]; }
+.gradient-text { background: linear-gradient(90deg, #6a5cff, #ff5fc0); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: 0 6px 24px rgba(123,92,255,.25); }
+.focus-ring { @apply outline-none ring-2 ring-brand-mid/40 ring-offset-0; }
